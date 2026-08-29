@@ -72,10 +72,10 @@ extending it.
 | Data skipping (min/max stats) | Automatic per-file column stats, first 32 columns by default | ✅ Day 1 §A/§C |
 | Predictive Optimization | Databricks auto-runs OPTIMIZE/VACUUM/ANALYZE on UC managed tables | ✅ Day 2 §C (conceptual) |
 | Partitioning strategy | Physical directory-level data layout by column | ✅ Day 2 §B (as a teaching aid; guidance to avoid on tables <1TB) |
-| **Deletion Vectors** | Marks deleted/updated rows via a bitmap instead of rewriting whole files | 📌 Candidate for future addition |
-| **Predictive I/O** | Photon-exclusive; uses deletion vectors + ML-predicted access patterns to accelerate reads and DELETE/UPDATE/MERGE | 📌 Candidate for future addition |
-| **Table statistics** (`ANALYZE TABLE` / `COMPUTE STATISTICS`) | Cost-based optimizer input for join ordering, etc. | 📌 Candidate for future addition |
-| **Shallow & Deep Clones** | Shallow: metadata-only copy referencing original data files, cheap, for dev/test. Deep: full independent copy including data files, for backup/migration | 📌 Candidate for future addition |
+| **Deletion Vectors** | Marks deleted/updated rows via a bitmap instead of rewriting whole files | Added to Notebook |
+| **Predictive I/O** | Photon-exclusive; uses deletion vectors + ML-predicted access patterns to accelerate reads and DELETE/UPDATE/MERGE | Added to Notebook |
+| **Table statistics** (`ANALYZE TABLE` / `COMPUTE STATISTICS`) | Cost-based optimizer input for join ordering, etc. | Added to Notebook |
+| **Shallow & Deep Clones** | Shallow: metadata-only copy referencing original data files, cheap, for dev/test. Deep: full independent copy including data files, for backup/migration | Added to Notebook |
 
 ### Query execution & distributed processing
 
@@ -91,7 +91,7 @@ extending it.
 | Adaptive Query Execution (AQE) | Runtime partition coalescing, join-strategy switching, skew splitting | ✅ Day 2 §D.4 |
 | Data skew handling / salting | Splitting a hot key into synthetic sub-keys to spread shuffle load | ✅ Day 2 §E |
 | Join strategy selection | Broadcast hash / sort-merge / shuffle hash join trade-offs | ✅ Day 1 §F.3 (guardrails) |
-| **Repartition vs. coalesce** | Increasing (repartition, full shuffle) vs. decreasing (coalesce, no shuffle) partition count | 📌 Candidate for future addition |
+| **Repartition vs. coalesce** | Increasing (repartition, full shuffle) vs. decreasing (coalesce, no shuffle) partition count | Added to Notebook |
 
 ---
 
